@@ -5,15 +5,86 @@
     </head>
 
     <body>
+
+
       <form action="https://www.google.com"
             method="post">
+            <!-- created a form, assigned it a website to post the inputted data to, told it to post to that url -->
         <input type="text" name="username">
         <input type="date" name="birthday">
         <input type="time" name="game-time">
-        <input type="email" name="email-address">
+        <input type="email" name="email-address" required>
         <input type="url" name="website">
         <input type="number" name="cost">
         <input type="tell" name="phone-number">
+        <!-- created input fields with various attribute (different types of ways to gather/input information.
+        type is the kind of information that will be gathered, name is a way to illustrate what the information
+        is for back end developers, required is a field that must be filled in before the user can hit send) -->
+        <textarea name="comment">
+          Add your comment here.
+        </textarea>
+        <!-- text area is a resizeable text field, name (same as previous), text inside of tags is what shows in the text
+        text box in the browser to tell the user what to do.  -->
+        <input type="radio" name="day" value="Friday" checked>Friday
+        <input type="radio" name="day" value="Saturday">Saturday
+        <input type="radio" name="day" value="Sunday">Sunday
+        <!-- radio type inputs are true/false yes/no toggle options. The gray type outside of the tag is what shows up
+        next to the option (cant be edited with CSS) value is what will be inserted into the data sheet. checked within
+        the tag is an attribute that means this option is the one that is selected by default-->
+
+        <input type="checkbox" name="day" value="Friday" checked>Friday
+        <input type="checkbox" name="day" value="Saturday">Saturday
+        <input type="checkbox" name="day" value="Sunday">Sunday
+        <!-- checkboxes are options that you can select multiple of or none at all. other is same as previous.  -->
+
+        <select name="day">
+          <option value="Friday">Friday</option>
+          <option value="Saturday" checked>Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+        <!-- select is a way to do a drop down menu when you have to list a lot of things at one time like countries
+        or states. Options are the list idems that you have to choose from-->
+
+        <input type="submit" name="submit" value="Send">
+        <!-- this is how you submit the form/data to the url that was chosen. Here, value is what shows in the box and
+        dont type it outside of the tags because this format is specifc to the type="submit" attribute. it isn't getting
+        uploaded to any data table anywhere-->
+
+        <button type="submit" name="submit">
+          <strong>Send us</strong> a message!
+        </button>
+        <!-- This is similar to an input but you can add more text inside the button and style it a bit. you don't have
+        a value attribute, you put the text inbetween the tags so you can style it if you want to.-->
+
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username">
+          <!-- Labels are what you can edit with CSS unlike inputs (words outside of the tags). You have to create an id
+          with the input that you want to pair it with. for="username" corresponds with the id that you give the input
+          and links them together-->
+
+          <br>
+          <br>
+          <br>
+          <!-- line breaks, whoop -->
+
+          <fieldset>
+            <legend>
+              Login
+            </legend>
+
+            <label>username
+              <input type="text" name="username" placeholder="Enter your full Astate email address">
+            </label>
+
+            <label>password
+              <input type="text" name="password" disabled>
+            </label>
+          </fieldset>
+          <!-- a field set is a group of data that is pair together with a box around it. The legend is like the title of
+          the section. placeholder is what will show in the input section until the user changes it. it is different than
+          a textarea bc it is an input. disabled means that you cannot fill out this field until a previous one gets
+          authorized as correct-->
+
       </form>
 
 
